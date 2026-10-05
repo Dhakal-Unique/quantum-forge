@@ -9,7 +9,7 @@ The idea is simple: use the Moth QPU to generate different candidate configurati
 
   
 
-How it works 
+**How it works** 
 
   
 
@@ -69,7 +69,7 @@ The Moth "graph-v1" QPU generates different bitstrings with different probabilit
 
   
 
-Example result 
+**Example result**
 
   
 
@@ -112,3 +112,37 @@ with:
   
 
 So Quantum Forge selected "1010" as the forged result even though it was not the most frequently measured configuration. 
+
+**Important note** 
+
+This experiment does not claim that the QPU directly solved the optimization problem or demonstrated quantum advantage. 
+
+The purpose of this prototype is to explore a hybrid workflow where QPU measurements provide candidate configurations and classical computation evaluates those candidates for a specific problem. 
+
+**Running the notebook** 
+
+You need: 
+
+Python 
+
+Jupyter Notebook or Google Colab 
+
+requests 
+
+A Moth Quantum API key 
+
+Set your API key as an environment variable: 
+
+MOTH_API_KEY=your_api_key 
+
+The notebook uses the key through: 
+
+os.environ["MOTH_API_KEY"] 
+
+Do not put your actual API key inside the notebook or commit it to GitHub. 
+
+**Notebook**
+
+The complete experiment is available in: 
+
+quantum_forge.ipynb
